@@ -31,4 +31,4 @@ const fetchJoke = () => {
     .catch(() => console.log('é mais de 8 mil essa Promise'));
 };
 
-window.onload = () => fetchJoke();
+window.onload = () => fetchJoke ();
