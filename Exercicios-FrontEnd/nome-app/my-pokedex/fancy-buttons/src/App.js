@@ -34,11 +34,16 @@ class App extends react.Component {
     console.log(this);
     console.log('clicou!!');
   }
+
+  getButtonsColor(num) {
+    return num % 2 === 0 ? 'green' : 'white';
+  }
   
   render() {
+    const {numeroDeCliques} = this.state
     return (
       <div className="App">
-        <button onClick={this.handleClick}>Numero de Cliques: {this.state.numeroDeCliques}</button>
+        <button onClick={this.handleClick} style = {{ backgroundColor: this.getButtonsColor(numeroDeCliques) }}>Numero de Cliques: {this.state.numeroDeCliques}</button>
         <button onClick={this.click}>Botão</button>
         <button onClick={this.onClick}>Botão</button>
       </div>
